@@ -1,0 +1,21 @@
+<html>
+<meta charset="UTF-8">
+<head>
+    <script>
+    var count =0;
+        function funFromjs(){
+        count = count+1;
+            document.getElementById("helloh5").innerHTML="HelloWebView,i'm from js：" + count;
+        }
+        function callNative(){
+            //调用android本地方法
+            window.androidTest.fun1FromAndroid("调用android本地方法fun1FromAndroid(String name)！！");
+        }
+    </script>
+</head>
+<body>
+<button id="button" onclick="callNative()">调用android本地方法</button>
+<div id="helloh5">
+</div>
+</body>
+</html>

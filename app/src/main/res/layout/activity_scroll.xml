@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="用户协议"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:text="1231231231231231231231231231
+            1231231231231231231231231231
+            1231231231231231231231231231
+            12312312312312312312312312311231231231231231231231231231
+            1231231231231231231231231231
+            1231231231231231231231231231
+            1231231231231231231231231231
+            1231231231231231231231231231
+            1231231231231231231231231231
+            123123123123123123123123123112312312312312312312312312311231231231231231231231231231
+            1231231231231231231231231231
+            1231231231231231231231231231
+            1231231231231231231231231231
+            1231231231231231231231231231
+            1231231231231231231231231231
+            123123123123123123123123123112312312312312312312312312311231231231231231231231231231
+            1231231231231231231231231231
+            1231231231231231231231231231
+            1231231231231231231231231231
+            1231231231231231231231231231
+            1231231231231231231231231231
+            123123123123123123123123123112312312312312312312312312311231231231231231231231231231
+            1231231231231231231231231231
+            1231231231231231231231231231
+            1231231231231231231231231231
+            1231231231231231231231231231
+            1231231231231231231231231231
+            1231231231231231231231231231" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="同意" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="拒绝" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
