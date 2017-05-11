@@ -44,13 +44,14 @@ public class MainActivity extends AppCompatActivity {
         btnRquest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Network.getApiService().query("一心一意").subscribeOn(Schedulers.io())
-                        .observeOn(AndroidSchedulers.mainThread()).subscribe(new MyObserver<DetailModel>(MainActivity.this) {
+
+                MyObserver<DetailModel> myObserver = new MyObserver<DetailModel>(MainActivity.this) {
                     @Override
                     public void onNext(DetailModel model) {
                         tvDetail.setText(model.getContent());
                     }
-                });
+                };
+                Network.getInstance().query(myObserver, "一心一意");
 //                Network.getApiService().queryArray("一心一意").subscribeOn(Schedulers.io())
 //                        .observeOn(AndroidSchedulers.mainThread()).subscribe(new MyObserver<List<DetailModel>>(MainActivity.this) {
 //                    @Override
@@ -96,13 +97,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Network.clear();
         ((MyApplication) getApplication()).appExit();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Network.clear();
     }
 }
