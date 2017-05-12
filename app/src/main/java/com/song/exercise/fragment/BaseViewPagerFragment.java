@@ -85,7 +85,11 @@ public class BaseViewPagerFragment extends Fragment {
     @Override
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
-        LogUtil.log();
+        if (hidden) {
+            LogUtil.log(this, "Fragment可见");
+        } else {
+            LogUtil.log(this, "Fragment不可见");
+        }
     }
 
     @Override

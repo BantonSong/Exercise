@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import com.google.gson.JsonParseException;
 import com.song.myframework.exception.MyException;
-import com.song.myframework.utils.NetworkUtil;
+import com.song.myframework.util.NetworkUtil;
 
 import org.json.JSONException;
 
@@ -32,7 +32,7 @@ public abstract class MyObserver<T> implements Observer<T> {
             d.dispose();
             Log.e(MyObserver.class.getSimpleName(), "网络错误，请检查网络设置并重试！");
         }
-        // 加载中对话框 TODO
+        // 加载中对话框，请求三秒后显示取消按钮 TODO
 
     }
 

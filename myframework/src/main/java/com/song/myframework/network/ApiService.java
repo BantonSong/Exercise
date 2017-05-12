@@ -2,6 +2,8 @@ package com.song.myframework.network;
 
 import com.song.myframework.model.DetailModel;
 
+import java.util.List;
+
 import io.reactivex.Observable;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -12,4 +14,10 @@ import retrofit2.http.Query;
 public interface ApiService {
     @GET("chengyu")
     Observable<DetailModel> query(@Query("chengyu") String chengyu);
+
+    @GET("chengyu")
+    Observable<List<DetailModel>> queryArray(@Query("chengyu") String chengyu);
+
+    @GET("chengyu")
+    Observable<String> queryString(@Query("chengyu") String chengyu);
 }

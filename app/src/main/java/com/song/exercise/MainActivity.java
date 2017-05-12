@@ -13,9 +13,11 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.song.exercise.clickposition.OpenActivityUtil;
+import com.song.exercise.deviceinfo.DeviceinfoActivity;
 import com.song.exercise.fragment.MyFragmentActivity;
 import com.song.exercise.fragment.MyViewPagerActivity;
 import com.song.exercise.h5.H5WebActivity;
+import com.song.exercise.location.LocationActivity;
 import com.song.exercise.mvp.activity.LoginActivity;
 import com.song.exercise.rxjava.RxJavaTest;
 
@@ -59,6 +61,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void fragmentViewPager(View view) {
         Intent intent = new Intent(this, MyFragmentActivity.class);
+        startActivity(intent);
+    }
+
+    public void location(View view) {
+        Intent intent = new Intent(this, LocationActivity.class);
+        startActivity(intent);
+    }
+
+    public void deviceInfo(View view) {
+        Intent intent = new Intent(this, DeviceinfoActivity.class);
         startActivity(intent);
     }
 

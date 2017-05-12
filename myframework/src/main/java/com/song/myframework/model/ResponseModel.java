@@ -1,16 +1,16 @@
 package com.song.myframework.model;
 
-import com.google.gson.JsonObject;
+import com.google.gson.JsonElement;
 
 /**
  * Created by songyawei on 2017/4/13.
  */
-public class ResponseModel<T> {
+public class ResponseModel {
     private String status;
     private String msg;
     private String errNum;
     private String errMsg;
-    private JsonObject result;
+    private JsonElement result;
 
     public String getStatus() {
         return status;
@@ -28,11 +28,11 @@ public class ResponseModel<T> {
         this.msg = msg;
     }
 
-    public void setResult(JsonObject result) {
+    public void setResult(JsonElement result) {
         this.result = result;
     }
 
-    public JsonObject getResult() {
+    public JsonElement getResult() {
         return result;
     }
 

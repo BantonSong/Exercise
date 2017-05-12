@@ -20,12 +20,12 @@ public class MyFragmentActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         MyFragment fragment = new MyFragment();
-//        MyFragment fragment2 = new MyFragment();
-//        MyFragment fragment3 = new MyFragment();
+        MyFragment fragment2 = new MyFragment();
+        MyFragment fragment3 = new MyFragment();
 
         fragmentTransaction.add(R.id.frameLayout, fragment);
-//        fragmentTransaction.add(R.id.frameLayout2, fragment2);
-//        fragmentTransaction.add(R.id.frameLayout3, fragment3);
+        fragmentTransaction.add(R.id.frameLayout2, fragment2);
+        fragmentTransaction.add(R.id.frameLayout3, fragment3);
         fragmentTransaction.commit();
     }
 }

@@ -1,4 +1,4 @@
-package com.song.myframework.utils;
+package com.song.myframework.util;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

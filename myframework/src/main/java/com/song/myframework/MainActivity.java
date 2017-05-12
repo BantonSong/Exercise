@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.song.myframework.model.DetailModel;
@@ -19,6 +20,7 @@ import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity {
     private TextView tvDetail;
+    private Button btnRquest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +39,34 @@ public class MainActivity extends AppCompatActivity {
         });
 
         tvDetail = (TextView) findViewById(R.id.tvDetail);
+        btnRquest = (Button) findViewById(R.id.btnRquest);
 
-        Network.getApiService().query("一心一意").subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread()).subscribe(new MyObserver<DetailModel>(this) {
+        btnRquest.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onNext(DetailModel model) {
-                tvDetail.setText(model.getContent());
+            public void onClick(View v) {
+                Network.getApiService().query("一心一意").subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread()).subscribe(new MyObserver<DetailModel>(MainActivity.this) {
+                    @Override
+                    public void onNext(DetailModel model) {
+                        tvDetail.setText(model.getContent());
+                    }
+                });
+//                Network.getApiService().queryArray("一心一意").subscribeOn(Schedulers.io())
+//                        .observeOn(AndroidSchedulers.mainThread()).subscribe(new MyObserver<List<DetailModel>>(MainActivity.this) {
+//                    @Override
+//                    public void onNext(List<DetailModel> model) {
+//                        if (model != null && model.size() > 0) {
+//                            tvDetail.setText(model.get(0).getContent());
+//                        }
+//                    }
+//                });
+//                Network.getApiService().queryString("").subscribeOn(Schedulers.io())
+//                        .observeOn(AndroidSchedulers.mainThread()).subscribe(new MyObserver<String>(MainActivity.this) {
+//                    @Override
+//                    public void onNext(String model) {
+//                        tvDetail.setText(model);
+//                    }
+//                });
             }
         });
     }
