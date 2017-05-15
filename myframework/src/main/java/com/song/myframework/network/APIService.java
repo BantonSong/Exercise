@@ -11,7 +11,7 @@ import retrofit2.http.Query;
 /**
  * Created by songyawei on 2017/4/13.
  */
-public interface ApiService {
+public interface APIService {
     @GET("chengyu")
     Observable<DetailModel> query(@Query("chengyu") String chengyu);
 

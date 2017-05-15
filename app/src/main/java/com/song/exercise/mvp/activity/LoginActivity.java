@@ -3,7 +3,6 @@ package com.song.exercise.mvp.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,18 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.song.exercise.R;
-import com.song.exercise.mvp.bean.User;
 import com.song.exercise.mvp.presenter.LoginPresenter;
 import com.song.exercise.mvp.view.ILoginView;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import rx.Observable;
-import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Func1;
-import rx.schedulers.Schedulers;
 
 public class LoginActivity extends Activity implements ILoginView, View.OnClickListener {
     private EditText edtUserName;
