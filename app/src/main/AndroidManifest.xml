@@ -24,14 +24,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".mvp.activity.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -43,6 +36,37 @@
         <activity android:name=".fragment.MyFragmentActivity" />
         <activity android:name=".location.LocationActivity" />
         <activity android:name=".deviceinfo.DeviceinfoActivity" />
+        <activity
+            android:name=".deeplink.TranslucentActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="weburl"
+                    android:path="/path"
+                    android:port="800"
+                    android:scheme="com.song.test" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".deeplink.DeepLinkAActivity" />
+        <activity android:name=".deeplink.DeepLinkBActivity" />
+        <activity android:name=".deeplink.DeepLinkCActivity" />
+        <activity android:name=".deeplink.DeepLinkActivity" />
+        <activity android:name=".deeplink.ProgressChartActivity" />
+
     </application>
 
 </manifest>

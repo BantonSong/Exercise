@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="pieColor1">#F17825</color>
+    <color name="pieColor2">#FF4081</color>
+    <color name="pieColor3">#ff008cc9</color>
+    <color name="pieColor4">#ff989f</color>
+    <color name="pieColor5">#5CB650</color>
+    <color name="pieColor6">#40506C</color>
+
+    <array name="pieColors">
+        <item>@color/pieColor1</item>
+        <item>@color/pieColor2</item>
+        <item>@color/pieColor3</item>
+        <item>@color/pieColor4</item>
+        <item>@color/pieColor5</item>
+        <item>@color/pieColor6</item>
+    </array>
+
+    <bool name="aa">false</bool>
+</resources>

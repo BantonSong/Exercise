@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/ivLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/complete" />
+
+    <View
+        android:id="@+id/topLine"
+        android:layout_width="5px"
+        android:layout_height="40dp"
+        android:layout_below="@id/ivLeft"
+        android:layout_marginLeft="10dp"
+        android:background="@color/yellow" />
+
+    <View
+        android:id="@+id/belowLine"
+        android:layout_width="5px"
+        android:layout_height="20dp"
+        android:layout_below="@id/topLine"
+        android:layout_marginLeft="10dp"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/tvAbove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/ivLeft"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/ivLeft"
+        android:text="上面文字"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvBelow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAbove"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/ivLeft"
+        android:text="下面文字下面文字"
+        android:textColor="@color/gray"
+        android:textSize="12sp" />
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <!--层叠图片-->
+    <declare-styleable name="StackedImageView">
+        <attr name="imageWidth" format="dimension" />
+        <attr name="imageHeight" format="dimension" />
+        <attr name="placeholderResId" format="reference" />
+    </declare-styleable>
+</resources>

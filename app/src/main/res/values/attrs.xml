@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressChartView">
+        <attr name="aboveTextSize" format="dimension" />
+        <attr name="belowTextSize" format="dimension" />
+        <attr name="aboveTextColor" format="color|reference" />
+        <attr name="belowTextColor" format="color|reference" />
+        <attr name="progressCompleteDrawable" format="reference" />
+        <attr name="progressIncompleteDrawable" format="reference" />
+        <attr name="lineCompleteColor" format="color|reference" />
+        <attr name="lineIncompleteColor" format="color|reference" />
+        <attr name="leftRightSpace" format="dimension" />
+        <!-- 右侧两行文字间隔 -->
+        <attr name="aboveBlewTextSpace" format="dimension" />
+        <attr name="belowRowSpace" format="float" />
+        <attr name="verticalLineWidth" format="dimension" />
+    </declare-styleable>
+</resources>

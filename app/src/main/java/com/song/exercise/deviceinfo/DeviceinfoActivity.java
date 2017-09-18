@@ -27,6 +27,7 @@ public class DeviceinfoActivity extends AppCompatActivity {
     private TextView tvSIMSerialValue;
     private TextView tvUUIDValue;
     private TextView tvDeviceIdValue;
+    private TextView tvMemoryInfoValue;
 
     private Button btnDeviceInfo;
 
@@ -46,6 +47,7 @@ public class DeviceinfoActivity extends AppCompatActivity {
         tvSIMSerialValue = (TextView) findViewById(R.id.tvSIMSerialValue);
         tvUUIDValue = (TextView) findViewById(R.id.tvUUIDValue);
         tvDeviceIdValue = (TextView) findViewById(R.id.tvDeviceIdValue);
+        tvMemoryInfoValue = (TextView) findViewById(R.id.tvMemoryInfoValue);
 
         btnDeviceInfo = (Button) findViewById(R.id.btnDeviceInfo);
         btnDeviceInfo.setOnClickListener(new View.OnClickListener() {
@@ -59,6 +61,7 @@ public class DeviceinfoActivity extends AppCompatActivity {
                 tvSIMSerialValue.setText(getSIMSerialValue());
                 tvUUIDValue.setText(getUUIDValue());
                 tvDeviceIdValue.setText(CommonUtil.getDeviceId(DeviceinfoActivity.this));
+                tvMemoryInfoValue.setText(getMemory());
             }
         });
 
@@ -66,6 +69,17 @@ public class DeviceinfoActivity extends AppCompatActivity {
             telephonyManager = (TelephonyManager) (this.getSystemService(Context.TELEPHONY_SERVICE));
         } catch (Exception e) {
         }
+    }
+
+    private String getMemory() {
+        //应用程序最大可用内存
+        int maxMemory = ((int) Runtime.getRuntime().maxMemory()) / 1024 / 1024;
+        //应用程序已获得内存
+        long totalMemory = ((int) Runtime.getRuntime().totalMemory()) / 1024 / 1024;
+        //应用程序已获得内存中未使用内存
+        long freeMemory = ((int) Runtime.getRuntime().freeMemory()) / 1024 / 1024;
+
+        return "---> maxMemory=" + maxMemory + "M,totalMemory=" + totalMemory + "M,freeMemory=" + freeMemory + "M";
     }
 
     private String getIMEIValue() {
